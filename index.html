@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>HTML5 Roulette</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=400" />
+  <link rel="stylesheet" href="roulette.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+    <header class="mdl-layout__header mdl-color--blue-grey">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><i>Geek Roulette</i></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="https://github.com/BerfierNogueira/Roleta">Source no github
+            <i class="material-icons">
+              bug_report
+            </i>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div id="holder" style="width:550px; height:510px;">
+        </div>
+        <button id="genBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          Rodar!
+        </button>
+        <p>Bookmark <a id="bookmarklink" href='./roulette.html'>this link</a></p>
+        <textarea id="items" name="items" rows="8" cols="15"> </textarea>
+      </div>
+    </main>
+  </div>
+  <script type="text/javascript" src="raphael-min.js"></script>
+  <script type="text/javascript" src="mersenne-twister.js"></script>
+  <script type="text/javascript" src="roulette.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>
