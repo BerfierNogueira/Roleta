@@ -7,10 +7,38 @@ body {
   background-color:rgba(0, 0, 0, .8);
 }
 
-p{
-  color:lightgrey;
-}
 
 button {
   height: 4em;
+}
+
+.box{
+  max-width: 400px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.demo-card-square.mdl-card {
+  width: 250px;
+  height: 250px;
+  margin: 7px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('') 55% 50% no-repeat #46B6AC;
+}
+
+#aproves{
+  display: none;
+}
+
+#genBtn{
+  height: 60px !important;
+  width: 150px !important;
+  font-size: 20px;
 }
