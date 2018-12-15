@@ -1,7 +1,9 @@
 
 function addPoints(num, userNum) {
   users[userNum].setponctuation(num)
-  document.querySelectorAll("#putText")[userNum].innerHTML = users[userNum].getponctuation()
+  var obj = document.querySelectorAll(".putText")
+  obj[userNum].innerHTML = users[userNum].getponctuation() + " pontos"
+  console.log(obj + "\nUser = "+users[userNum].getname())
 }
 
 
@@ -16,13 +18,14 @@ async function answerQuestion(user, value, negative = false) {
   var header = questions[random].head;
   var gabarito = questions[random].gabarito;
   var rightMatch = gabarito-1;
+  if(isNaN(value)) value = 0;
 
   /*const {value: color} = */
   Swal({
     title: 'Pergunta!',
     position: 'top-end',
     html: `Você tem <strong></strong> segundos <br>
-    ${header}
+    ${header} <br> ESTA PERGUNTA VALE ${value} pontos
     `,
     input: 'radio',
     width: 600,
@@ -42,17 +45,19 @@ async function answerQuestion(user, value, negative = false) {
     },
 
     onClose: () => {
+      Swal.stopTimer()
       clearInterval(timerInterval)
+      
       var elem = document.querySelector("input:checked")
       if (elem == null) {
-        Swal.stopTimer()
+        
         if(negative == true) addPoints((-1)*value, user)
         clearInterval(timerInterval)
         Swal.close()
         return;
       }
+      
       console.log(elem.value + " "+rightMatch)
-      Swal({ html: 'You selected: ' + elem.value })
       if (elem.value == rightMatch) {
         Swal({ html: 'Você selecionou: ' + elem.value + " e está certíssimo" })
         console.log("Acertô")
@@ -70,6 +75,13 @@ async function answerQuestion(user, value, negative = false) {
       }
 
       console.log("TST")
+      Swal.close() 
     },
+    onAfterClose: ()=>{
+      clearInterval(timerInterval)
+    }
   })
+
+  questions.splice(random,1)
+
 }

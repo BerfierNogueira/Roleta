@@ -15,11 +15,13 @@ var pieText = [
   '100 pontos',
   'Overflow',
   '500 pontos',
-  'Perde a vez'
+  'Perde a vez',
+  'Perde metade',
 ];
 var center = { 'x': 270, 'y': 270 };
 var diameter = 220;
 var m = new MersenneTwister(); //move to global to fix the seed
+var gamerTurn = 0;
 
 //max not included, 0 to max-1
 function getRandom(max) {
@@ -202,16 +204,86 @@ document.body.onload = function () {
 
   document.getElementById('genBtn').onclick = function () {
     //updateUrl();
+    let i = gamerTurn % users.length;
     reset();
     init();
     randomSpin();
     refreshUi();
     //removeWinner();
-    console.log(getSelected());
-    answerQuestion(0, 100);
+    var selected = getSelected();
+    Swal({
+      title: 'Sorteado para '+users[i].getname(),
+      html: pieText[selected],
+      onClose: () => {
+        chooses(i,selected);
+      }
+    });
+    gamerTurn++;
   };
 
+  function chooses(round,opt) {
+    switch (opt) {
+      case 0:
+        answerQuestion(round, 100, true);
+        break;
+      case 1:
+        answerQuestion(round, 200);
+        break;
+      case 2:
+        answerQuestion(round, users[round].getponctuation());
+        break;
+      case 3:
+        answerQuestion(round, 100, true);
+        break;
+      case 4:
+        answerQuestion(round, (users[round].getponctuatio()) / 2);
+        break;
+      case 5:
+        answerQuestion(round, 300);
+        break;
+      case 6:
+        answerQuestion(round, 150).then(function(){
+          answerQuestion(round, 150);
+        });
+        break;
+      case 7:
+        answerQuestion(round, 200);
+        break;
+      case 8:
+        answerQuestion(round, 100);
+        break;
+      case 9:
+        let change = (round + 1) % users.length;
+        answerQuestion(round, 200);
+        users[change].setponctuation(200);
+        break;
+      case 10:
+        answerQuestion(round, 500);
+        break;
+      case 11:
+        alert("Dando a vez");
+        break;
+      case 12:
+        answerQuestion(round, (users[round].getponctuation()) / 2, true);
+        break;
+    }
 
+  }
+
+  /*
+    'Perde 100',
+  '200 pontos',
+  'Passa ou Dobra',
+  '100 pontos',
+  'Ganhe metade',
+  '300 pontos',
+  'Duas por uma',
+  '200 pontos',
+  '100 pontos',
+  'Overflow',
+  '500 pontos',
+  'Perde a vez'
+  */
 
   //window.onkeydown = (function(evt){if (evt.keyCode === 32 || evt.keyCode === 13){ init();}});
   //

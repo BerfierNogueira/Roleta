@@ -70,7 +70,7 @@ var questions = JSON.parse(`[
           "e)Slots",
           ""
        ],
-       "gabarito":4
+       "gabarito":5
     },
     {
        "head":"8 - O elemento de um microcomputador que n\u00e3o pode ter dados gravados pelo usu\u00e1rio, mas cuja grava\u00e7\u00e3o das informa\u00e7\u00f5es referentes \u00e0s rotinas de inicializa\u00e7\u00e3o \u00e9 feita pelo fabricante do microcomputador \u00e9:",
@@ -106,7 +106,7 @@ var questions = JSON.parse(`[
           "e) Word World Wide",
           ""
        ],
-       "gabarito":2
+       "gabarito":1
     },
     {
        "head":"11 - Em rela\u00e7\u00e3o a m\u00e9trica da informa\u00e7\u00e3o digital. Qual alternativa abaixo est\u00e1 na ordem correta?",
@@ -118,7 +118,7 @@ var questions = JSON.parse(`[
           "E) K B b M G T",
           ""
        ],
-       "gabarito":1
+       "gabarito":3
     },
     {
        "head":"12- Atualmente existe um processador com 18 n\u00facleos que j\u00e1 \u00e9 vendido comercialmente, denominado:",
@@ -130,7 +130,7 @@ var questions = JSON.parse(`[
           "e)i11",
           ""
        ],
-       "gabarito":3
+       "gabarito":4
     },
     {
        "head":"13 - O tipo de amea\u00e7a \u00e0 seguran\u00e7a de um computador que consiste em um programa completo que se replica de forma aut\u00f4noma para se propagar para outros computadores \u00e9:",
@@ -142,7 +142,7 @@ var questions = JSON.parse(`[
           "5. Sites",
           ""
        ],
-       "gabarito":4
+       "gabarito":1
     },
     {
        "head":"14 - Qual das alternativas corresponde a linguagem de programa\u00e7\u00e3o mais antiga?",
@@ -154,7 +154,7 @@ var questions = JSON.parse(`[
           "e) C",
           ""
        ],
-       "gabarito":1
+       "gabarito":4
     },
     {
        "head":"15 - Supondo que voc\u00ea deseja imprimir da p\u00e1gina 19 \u00e0 p\u00e1gina 27, e tamb\u00e9m a p\u00e1gina 32 de um documento, o que voc\u00ea dever\u00e1 digitar no sistema?",
@@ -166,7 +166,7 @@ var questions = JSON.parse(`[
           "5. 19,27,32",
           ""
        ],
-       "gabarito":4
+       "gabarito":3
     },
     {
        "head":"1 - O que Dumbledore deixa para Rony, Hermione e Harry, respectivamente?",
@@ -178,7 +178,7 @@ var questions = JSON.parse(`[
           "e) Um desiluminador, um s\u00edmbolo e uma espada",
           ""
        ],
-       "gabarito":3
+       "gabarito":4
     },
     {
        "head":"2 - Qual a primeira Joia do Infinito a aparecer no universo cinematogr\u00e1fico da Marvel e em qual filme?",
@@ -190,7 +190,7 @@ var questions = JSON.parse(`[
           "e) Joia da Mente, Vingadores",
           ""
        ],
-       "gabarito":4
+       "gabarito":2
     },
     {
        "head":"3 - Qual das alternativas cont\u00eam apenas personagens da Marvel?",
@@ -214,7 +214,7 @@ var questions = JSON.parse(`[
           "e) Coincid\u00eancia",
           ""
        ],
-       "gabarito":2
+       "gabarito":1
     },
     {
        "head":"5 - S\u00e3o jogos exclusivos para o Playstation:",
@@ -226,7 +226,7 @@ var questions = JSON.parse(`[
           "e) God of War, Uncharted e Driveclub",
           ""
        ],
-       "gabarito":1
+       "gabarito":5
     },
     {
        "head":"6 - Os quatro continentes iniciais apresentados nos jogos e no anime de Pok\u00e9mon s\u00e3o, respectivamente:",
@@ -250,10 +250,10 @@ var questions = JSON.parse(`[
           "* e) Misty",
           ""
        ],
-       "gabarito":5
+       "gabarito":1
     },
     {
-       "head":"8 - Em Senhor dos An\u00e9is, onde fica a \u00c1rvore Branca de Gondor?",
+       "head":"8 - Em Senhor dos An\u00e9is, onde fica a \u00c1rvore Branca?",
        "options":[
           "1. Condado",
           "2. Floresta Velha",
@@ -286,7 +286,7 @@ var questions = JSON.parse(`[
           "5. Port\u00e3o da Insanidade",
           ""
        ],
-       "gabarito":4
+       "gabarito":2
     },
     {
        "head":"11- Em Dragon Ball Z, Dai Kaioshin \u00e9 fan\u00e1tico por:",
@@ -298,7 +298,7 @@ var questions = JSON.parse(`[
           "5. Conhecimento",
           ""
        ],
-       "gabarito":2
+       "gabarito":3
     },
     {
        "head":"12 - Em Game of Thrones, qual o nome do lobo de Jon Snow?",
@@ -322,7 +322,7 @@ var questions = JSON.parse(`[
           "5. King",
           ""
        ],
-       "gabarito":2
+       "gabarito":4
     },
     {
        "head":"14 - No seriado Everybody Hates Chris (Todo Mundo Odeia o Chris), no epis\u00f3dio que o Chris se demite do emprego, como o seu novo patr\u00e3o chama ele?",
@@ -334,7 +334,7 @@ var questions = JSON.parse(`[
           "5. Carinha que mora logo ali",
           ""
        ],
-       "gabarito":4
+       "gabarito":3
     },
     {
        "head":"15 - Em The Big Bang Theory, a m\u00fasica Gatinho Macio (Soft Kitty) \u00e9 cantada a Sheldon quando:",
@@ -347,6 +347,30 @@ var questions = JSON.parse(`[
           ""
        ],
        "gabarito":3
-    }
+    },
+    {
+      "head":"16 - Qual destas foi a primeira programadora?",
+      "options":[
+         "1. Jean Jennings Bartik",
+         "2. Grace Hopper",
+         "3. Marissa Mayer",
+         "4. R. M. Stallman",
+         "5. Ada Lovelace",
+         ""
+      ],
+      "gabarito":5
+   },
+   {
+      "head":"17 - Pai da ciencia da computacao homenageado no filme O Jogo da Imitacao",
+      "options":[
+         "1. Richard Stallman",
+         "2. Linus Torvalds",
+         "3. Kim Dot Com",
+         "4. Alan Turing",
+         "5. James Mcavoy",
+         ""
+      ],
+      "gabarito":4
+   }
  ]`);
 console.log(questions)
